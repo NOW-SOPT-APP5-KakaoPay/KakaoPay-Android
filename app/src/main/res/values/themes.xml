@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.SOPT_KAKAOPAY" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.SOPT_KAKAOPAY" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <!--        <item name="colorPrimary">@color/white</item>-->
+        <!--        <item name="colorPrimaryVariant">@color/white</item>-->
+        <!--        <item name="colorOnPrimary">@color/white</item>-->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="Theme.SOPT_KAKAOPAY" parent="Base.Theme.SOPT_KAKAOPAY" />
+    <style name="Theme.KakaoPay" parent="Base.Theme.SOPT_KAKAOPAY" />
+
 </resources>

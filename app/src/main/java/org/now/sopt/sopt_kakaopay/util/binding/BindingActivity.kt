@@ -15,5 +15,8 @@ abstract class BindingActivity<T : ViewDataBinding>(
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutResId) // 데이터 바인딩 설정
         binding.lifecycleOwner = this // lifecycleOwner를 현재 액티비티로 설정
+        initView()
     }
+
+    protected abstract fun initView()
 }

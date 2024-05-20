@@ -63,91 +63,87 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
                 <LinearLayout
                     android:layout_width="331dp"
                     android:layout_height="95dp"
                     android:layout_marginBottom="12dp"
+                    android:background="@drawable/border_yellow"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
                     android:paddingStart="20dp"
                     android:paddingTop="35dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="36dp"
-                    android:background="@drawable/border_yellow"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layoutDirection="ltr"
-                    android:weightSum="1"
-                    android:padding="16dp">
+                    android:weightSum="1">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
                         android:layout_gravity="center_vertical"
-                        >
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="53dp"
                             android:layout_height="27dp"
-                            android:text="모은 돈"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:lineSpacingExtra="27dp"
-                            android:letterSpacing="-0.02"
                             android:layout_gravity="left"
+                            android:fontFamily="@font/noto_sans_kr"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="27dp"
+                            android:text="모은 돈"
                             android:textColor="@android:color/black"
-                            />
+                            android:textFontWeight="700"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="109dp"
                             android:layout_height="20dp"
-                            android:text="보험부터 부동산까지"
-                            android:textSize="13sp"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:textFontWeight="400"
-                            android:lineSpacingExtra="19.5dp"
-                            android:letterSpacing="-0.02"
                             android:layout_gravity="left"
+                            android:fontFamily="@font/noto_sans_kr"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="19.5dp"
+                            android:text="보험부터 부동산까지"
                             android:textColor="@android:color/black"
-                            />
+                            android:textFontWeight="400"
+                            android:textSize="13sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:layout_gravity="center_vertical|end"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/txv_asset_saved"
                             android:layout_width="110dp"
                             android:layout_height="27dp"
-                            android:text="20,007,500원"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
                             android:fontFamily="@font/noto_sans_kr"
-                            android:lineSpacingExtra="27dp"
-                            android:textFontWeight="700"
                             android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="27dp"
+                            android:text="20,007,500원"
                             android:textAlignment="textEnd"
                             android:textColor="@android:color/black"
-                            />
+                            android:textFontWeight="700"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/ic_rightchevron_black"
+                            android:id="@+id/iv_asset_seesaved"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription=""
                             android:paddingLeft="8dp"
                             android:paddingTop="5dp"
                             android:paddingRight="8dp"
                             android:paddingBottom="6dp"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/ic_right_chevron_black"
-                            android:contentDescription="" />
+                            android:src="@drawable/ic_right_chevron_black" />
                     </LinearLayout>
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="330dp"
@@ -181,7 +177,7 @@
                             android:textColor="#737679"/>
 
                         <LinearLayout
-                            android:id="@+id/btn_seemore"
+                            android:id="@+id/btn_asset_seemoreaccount"
                             android:layout_width="80dp"
                             android:layout_height="39dp"
                             android:gravity="center_vertical"
@@ -205,6 +201,7 @@
                                 android:textStyle="bold"/>
 
                             <ImageView
+                                android:id="@+id/iv_asset_moreaccount"
                                 android:layout_width="22dp"
                                 android:layout_height="24dp"
                                 android:paddingStart="9dp"
@@ -235,6 +232,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
+                                android:id="@+id/iv_asset_bank"
                                 android:layout_width="34dp"
                                 android:layout_height="33.29dp"
                                 android:layout_marginEnd="12dp"
@@ -246,6 +244,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/txv_asset_bank"
                                     android:layout_width="46dp"
                                     android:layout_height="18dp"
                                     android:layout_marginBottom="3dp"
@@ -270,6 +269,7 @@
                         </LinearLayout>
 
                         <android.widget.Button
+                            android:id="@+id/btn_asset_transfer"
                             android:layout_width="50dp"
                             android:layout_height="29dp"
                             android:layout_marginEnd="10dp"
@@ -314,6 +314,7 @@
                             android:gravity="center_horizontal|center_vertical">
 
                             <TextView
+                                android:id="@+id/txv_asset_point"
                                 android:layout_width="wrap_content"
                                 android:layout_height="24dp"
                                 android:fontFamily="@style/TextAppearance.Android.Body1Bold"
@@ -326,6 +327,7 @@
                                 android:textStyle="bold" />
 
                             <ImageView
+                                android:id="@+id/iv_asset_seepoint"
                                 android:layout_width="8dp"
                                 android:layout_height="31dp"
                                 android:src="@drawable/ic_right_chevron_gray_large" />
@@ -692,6 +694,7 @@
                             android:lineSpacingExtra="27dp"
                             android:letterSpacing="-0.02"/>
                         <LinearLayout
+                            android:id="@+id/li_asset_investment"
                             android:layout_width="80dp"
                             android:layout_height="39dp"
                             android:gravity="center_vertical"

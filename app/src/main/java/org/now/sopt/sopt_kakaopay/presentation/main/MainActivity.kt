@@ -1,5 +1,7 @@
 package org.now.sopt.sopt_kakaopay.presentation.main
 
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.ActivityMainBinding
@@ -8,10 +10,19 @@ import org.now.sopt.sopt_kakaopay.presentation.main.assets.AssetsFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.benefits.BenefitsFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.home.HomeFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.stocks.StocksFragment
-import org.now.sopt.sopt_kakaopay.util.binding.BindingActivity
 
-class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
-    override fun initView() {
+class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+
+        initView()
+    }
+
+    private fun initView() {
         initCurrentFragment()
         initBottomNavClickListener()
     }

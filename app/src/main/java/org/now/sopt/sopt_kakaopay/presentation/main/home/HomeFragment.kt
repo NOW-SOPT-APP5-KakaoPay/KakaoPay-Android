@@ -1,14 +1,34 @@
 package org.now.sopt.sopt_kakaopay.presentation.main.home
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import org.now.sopt.sopt_kakaopay.R
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
-import org.now.sopt.sopt_kakaopay.util.binding.BindingFragment
 
-class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+class HomeFragment : Fragment() {
 
-    override fun initView() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding: FragmentHomeBinding
+        get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

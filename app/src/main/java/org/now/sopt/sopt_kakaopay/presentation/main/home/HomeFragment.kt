@@ -9,9 +9,10 @@ import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
 import org.now.sopt.sopt_kakaopay.util.binding.BindingFragment
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private val binding: FragmentHomeBinding
+        get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
     private val items = listOf(
         TotalContentItem("연진카뱅", "05.20", "-20,000", "송금", R.drawable.ic_kakaobank_logo),

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
-import org.now.sopt.sopt_kakaopay.util.binding.BindingFragment
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null

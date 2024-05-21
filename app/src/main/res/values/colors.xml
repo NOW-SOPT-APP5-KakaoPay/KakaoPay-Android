@@ -6,7 +6,7 @@
     <color name="pink">#FFF0F0</color>
     <color name="blue">#008DFF</color>
     <color name="light_blue">#E5F3FF</color>
-    <color name="orange">FF7143</color>
+    <color name="orange">#FF7143</color>
 
     <!-- YELLOW -->
     <color name="yellow">#FFEB00</color>
@@ -21,8 +21,4 @@
     <color name="grey200">#F3F4F5</color>
     <color name="blue_grey500">#ADB5BD</color>
     <color name="blue_grey400">#E9ECEF</color>
-
-
-
-
 </resources>

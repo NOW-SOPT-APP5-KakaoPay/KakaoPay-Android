@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 버튼이 Active 상태일 때 -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/yellow" />
+            <corners android:radius="50dp" />
+        </shape>
+    </item>
+
+    <!--기본 상태-->
+    <item>
+        <shape>
+        <solid android:color="@color/yellow" />
+            <corners android:radius="50dp" />
+        </shape>
+    </item>
+</selector>

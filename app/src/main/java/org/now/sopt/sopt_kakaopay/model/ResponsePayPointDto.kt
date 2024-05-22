@@ -14,6 +14,6 @@ data class ResponsePayPointDto(
 )
 @Serializable
 data class PayPointData(
-    @SerialName("payMoney")
+    @SerialName("payPoint")
     val PayPoint: String
 )

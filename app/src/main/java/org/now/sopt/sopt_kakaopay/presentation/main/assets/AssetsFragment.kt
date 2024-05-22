@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import org.now.sopt.sopt_kakaopay.databinding.FragmentAssetsBinding
+import java.text.DecimalFormat
 
 class AssetsFragment : Fragment() {
 
@@ -48,7 +49,9 @@ class AssetsFragment : Fragment() {
         val payMoneyInt = payMoney.replace(",", "").toIntOrNull() ?: 0
         val payPointInt = payPoint.replace(",", "").toIntOrNull() ?: 0
         val total = payMoneyInt + payPointInt
-        binding.txvAssetPoint.text = total.toString()+"원"
+        val decimalFormat = DecimalFormat("#,###")
+        var totalMoney = decimalFormat.format(total)
+        binding.txvAssetPoint.text = totalMoney.toString()+"원"
     }
 
     override fun onDestroyView() {

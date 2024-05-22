@@ -1155,7 +1155,7 @@
                     android:layout_width="330dp"
                     android:layout_height="324dp"
                     android:background="@drawable/border_white"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_horizontal|center_vertical"
                     android:orientation="vertical"
                     android:paddingStart="20dp"
                     android:paddingTop="18dp"

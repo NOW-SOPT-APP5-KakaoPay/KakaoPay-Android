@@ -23,7 +23,8 @@ class TransactionHistoryViewHolder(
             )
 
             ivRecentUserFavorite.setOnClickListener {
-                bookmarkClickListener(transactionHistory)
+                val updatedTransactionHistory = transactionHistory.toggleBookmark()
+                bookmarkClickListener(updatedTransactionHistory)
             }
         }
     }

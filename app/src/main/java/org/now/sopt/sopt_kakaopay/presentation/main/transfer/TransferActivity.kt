@@ -15,7 +15,7 @@ import org.now.sopt.sopt_kakaopay.util.view.UiState
 
 class TransferActivity : AppCompatActivity() {
 
-    private val binding by lazy { ActivityTransferBinding.inflate(layoutInflater) }
+    private lateinit var binding: ActivityTransferBinding
     private val transactionHistoryAdapter = TransactionHistoryAdapter()
     private val viewModel: TransferViewModel by viewModels {
         TransferViewModelFactory(ServicePool.authService)
@@ -23,6 +23,7 @@ class TransferActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityTransferBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initializeRecyclerView()

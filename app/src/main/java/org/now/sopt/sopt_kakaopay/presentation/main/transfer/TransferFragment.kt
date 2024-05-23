@@ -21,7 +21,7 @@ class TransferFragment : Fragment() {
     private val binding: FragmentTransferBinding
         get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
-    private val transactionHistoryAdapter = TransactionHistoryAdapter()
+    private lateinit var transactionHistoryAdapter: TransactionHistoryAdapter
     private val viewModel: TransferViewModel by viewModels {
         TransferViewModelFactory(ServicePool.authService)
     }
@@ -37,6 +37,7 @@ class TransferFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        transactionHistoryAdapter = TransactionHistoryAdapter(viewModel)
         initializeRecyclerView()
         observeTransactionUiState()
         viewModel.fetchTransactionHistory()

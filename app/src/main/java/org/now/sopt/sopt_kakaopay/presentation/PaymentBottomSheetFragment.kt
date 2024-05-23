@@ -1,29 +1,33 @@
 package org.now.sopt.sopt_kakaopay.presentation
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentPaymentBinding
 
-class PaymentFragment : Fragment() {
+class PaymentBottomSheetFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentPaymentBinding? = null
     private val binding: FragmentPaymentBinding
         get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
+    private var originalStatusBarColor: Int = 0
+
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPaymentBinding.inflate(inflater, container, false)
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,7 +57,6 @@ class PaymentFragment : Fragment() {
         }
     }
 
-
     private fun setSelectedOption(selected: View, unselected: View) {
         selected.isSelected = true
         unselected.isSelected = false
@@ -61,11 +64,36 @@ class PaymentFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        originalStatusBarColor = requireActivity().window.statusBarColor
         requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.yellow)
     }
 
     override fun onDestroyView() {
+        requireActivity().window.statusBarColor = originalStatusBarColor
         _binding = null
         super.onDestroyView()
     }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        return object : BottomSheetDialog(requireContext(), theme) {
+            override fun onAttachedToWindow() {
+                super.onAttachedToWindow()
+                val bottomSheet = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
+                val behavior = BottomSheetBehavior.from(bottomSheet)
+                bottomSheet.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+                behavior.state = BottomSheetBehavior.STATE_EXPANDED
+                behavior.peekHeight = 0
+
+//                val screenHeight = resources.displayMetrics.heightPixels
+//                bottomSheet.layoutParams.height = (screenHeight * 0.9).toInt() // 상단에 10% 남기기
+//                behavior.state = BottomSheetBehavior.STATE_EXPANDED // 초기 상태를 확장 상태로 설정
+
+            }
+        }.apply {
+            setOnDismissListener {
+                requireActivity().window.statusBarColor = originalStatusBarColor
+            }
+        }
+    }
+
 }

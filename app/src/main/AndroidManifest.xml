@@ -17,6 +17,9 @@
         android:screenOrientation="portrait"
         tools:targetApi="31">
         <!-- 서버파트가 HTTPS로 해주면 usesCleartextTraffic 삭제-->
+
+        <activity android:name=".presentation.main.transfer.TransferActivity"
+            android:exported="false"/>
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true">

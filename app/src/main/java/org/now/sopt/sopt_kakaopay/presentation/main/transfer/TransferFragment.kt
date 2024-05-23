@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.launch
 import org.now.sopt.sopt_kakaopay.ServicePool
 import org.now.sopt.sopt_kakaopay.databinding.FragmentTransferBinding
+import org.now.sopt.sopt_kakaopay.model.BookMarkRequestDto
+import org.now.sopt.sopt_kakaopay.model.TransactionHistoryDto
 import org.now.sopt.sopt_kakaopay.util.fragment.showToast
 import org.now.sopt.sopt_kakaopay.util.view.UiState
 
@@ -21,7 +23,11 @@ class TransferFragment : Fragment() {
     private val binding: FragmentTransferBinding
         get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
-    private lateinit var transactionHistoryAdapter: TransactionHistoryAdapter
+    private val transactionHistoryAdapter by lazy {
+        TransactionHistoryAdapter { transactionHistory ->
+            handleBookmarkClick(transactionHistory)
+        }
+    }
     private val viewModel: TransferViewModel by viewModels {
         TransferViewModelFactory(ServicePool.authService)
     }
@@ -37,7 +43,6 @@ class TransferFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        transactionHistoryAdapter = TransactionHistoryAdapter(viewModel)
         initializeRecyclerView()
         observeTransactionUiState()
         viewModel.fetchTransactionHistory()
@@ -77,6 +82,15 @@ class TransferFragment : Fragment() {
                     }
                 }
             }
+        }
+    }
+
+    private fun handleBookmarkClick(transactionHistory: TransactionHistoryDto) {
+        val bookmarkRequest = BookMarkRequestDto(transactionHistory.bank, transactionHistory.bankAccount)
+        if (transactionHistory.bookmark) {
+            viewModel.deleteBookmark(bookmarkRequest)
+        } else {
+            viewModel.addBookmark(bookmarkRequest)
         }
     }
 

@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
+import org.now.sopt.sopt_kakaopay.DotsIndicatorDecoration
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
 import org.now.sopt.sopt_kakaopay.presentation.PaymentBottomSheetFragment
@@ -35,15 +39,33 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupViewPager()
+        setupRecyclerView()
         setupTransferButton()
         showPaymentBottomSheet()
     }
 
-    private fun setupViewPager() {
-        val adapter = HomeViewPagerAdapter(items)
-        binding.vpHomeTotalContent.adapter = adapter
-        binding.vpHomeTotalContentDotsIndicator.attachTo(binding.vpHomeTotalContent)
+    private fun setupRecyclerView() {
+        val adapter = TotalContentAdapter(items)
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        binding.rvHomeTotalContent.adapter = adapter
+        binding.rvHomeTotalContent.layoutManager = layoutManager
+
+        // 아이템 간 간격 설정
+        val spacing = resources.getDimensionPixelSize(R.dimen.item_spacing)
+        binding.rvHomeTotalContent.addItemDecoration(SpacingItemDecoration(spacing))
+
+        // DotsIndicatorDecoration 추가
+        binding.rvHomeTotalContent.addItemDecoration(
+            DotsIndicatorDecoration(
+                colorInactive = ContextCompat.getColor(requireContext(), R.color.grey500),
+                colorActive = ContextCompat.getColor(requireContext(), R.color.black)
+            )
+        )
+
+        // PagerSnapHelper 추가
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(binding.rvHomeTotalContent)
     }
 
     private fun setupTransferButton() {
@@ -51,6 +73,7 @@ class HomeFragment : Fragment() {
             navigateToTransferActivity()
         }
     }
+
     private fun navigateToTransferActivity() {
         val intent = Intent(requireContext(), TransferActivity::class.java)
         startActivity(intent)
@@ -67,5 +90,3 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 }
-
-

@@ -12,5 +12,5 @@ data class TransactionHistoryDto(
     @SerialName("name")
     val name: String,
     @SerialName("bookmark")
-    val bookmark: Boolean
+    var bookmark: Boolean
 )

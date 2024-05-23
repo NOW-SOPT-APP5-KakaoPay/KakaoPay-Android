@@ -25,8 +25,6 @@ class TransactionHistoryViewHolder(
             ivRecentUserFavorite.setOnClickListener {
                 bookmarkClickListener(transactionHistory)
             }
-
-
         }
     }
 }

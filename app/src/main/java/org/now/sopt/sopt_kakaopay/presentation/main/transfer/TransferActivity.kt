@@ -10,13 +10,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.launch
 import org.now.sopt.sopt_kakaopay.ServicePool
 import org.now.sopt.sopt_kakaopay.databinding.ActivityTransferBinding
+import org.now.sopt.sopt_kakaopay.model.BookMarkRequestDto
+import org.now.sopt.sopt_kakaopay.model.TransactionHistoryDto
 import org.now.sopt.sopt_kakaopay.util.context.showToast
 import org.now.sopt.sopt_kakaopay.util.view.UiState
 
 class TransferActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTransferBinding
-    private val transactionHistoryAdapter = TransactionHistoryAdapter()
+    private val transactionHistoryAdapter by lazy {
+        TransactionHistoryAdapter { transactionHistory ->
+            handleBookmarkClick(transactionHistory)
+        }
+    }
     private val viewModel: TransferViewModel by viewModels {
         TransferViewModelFactory(ServicePool.authService)
     }
@@ -68,4 +74,12 @@ class TransferActivity : AppCompatActivity() {
         }
     }
 
+    private fun handleBookmarkClick(transactionHistory: TransactionHistoryDto) {
+        val bookmarkRequest = BookMarkRequestDto(transactionHistory.bank, transactionHistory.bankAccount)
+        if (transactionHistory.bookmark) {
+            viewModel.deleteBookmark(bookmarkRequest)
+        } else {
+            viewModel.addBookmark(bookmarkRequest)
+        }
+    }
 }

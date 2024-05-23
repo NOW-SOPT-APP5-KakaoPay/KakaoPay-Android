@@ -1,6 +1,5 @@
 package org.now.sopt.sopt_kakaopay.presentation.main.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
-import org.now.sopt.sopt_kakaopay.presentation.PaymentBottomSheetFragment
-import org.now.sopt.sopt_kakaopay.presentation.main.transfer.TransferActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -36,8 +33,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViewPager()
-        setupTransferButton()
-        showPaymentBottomSheet()
     }
 
     private fun setupViewPager() {
@@ -46,26 +41,9 @@ class HomeFragment : Fragment() {
         binding.vpHomeTotalContentDotsIndicator.attachTo(binding.vpHomeTotalContent)
     }
 
-    private fun setupTransferButton() {
-        binding.btnHomePayMoneySend.setOnClickListener {
-            navigateToTransferActivity()
-        }
-    }
-    private fun navigateToTransferActivity() {
-        val intent = Intent(requireContext(), TransferActivity::class.java)
-        startActivity(intent)
-    }
-    private fun showPaymentBottomSheet() {
-        binding.clHomeGoToSitePayment.setOnClickListener {
-            val paymentBottomSheetFragment = PaymentBottomSheetFragment()
-            paymentBottomSheetFragment.show(childFragmentManager, paymentBottomSheetFragment.tag)
-        }
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
-
 

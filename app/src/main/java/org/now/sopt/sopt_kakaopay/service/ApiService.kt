@@ -1,16 +1,13 @@
 package org.now.sopt.sopt_kakaopay.service
 
-import org.now.sopt.sopt_kakaopay.MemberIdInterceptor
 import org.now.sopt.sopt_kakaopay.model.BookMarkRequestDto
 import org.now.sopt.sopt_kakaopay.model.BookMarkResponseDto
 import org.now.sopt.sopt_kakaopay.model.TransactionHistoryResponseDto
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.DELETE
 import retrofit2.http.GET
-import retrofit2.http.Header
+import retrofit2.http.HTTP
 import retrofit2.http.POST
-import retrofit2.http.Query
 
 interface ApiService {
     @GET("api/v1/history")
@@ -21,10 +18,9 @@ interface ApiService {
         @Body bookmarkRequest: BookMarkRequestDto
     ): BookMarkResponseDto
 
-    @DELETE("api/v1/bookmark")
+    @HTTP(method = "DELETE", path = "api/v1/bookmark", hasBody = true)
     suspend fun deleteBookmark(
-        @Query("bank") bank: String,
-        @Query("bankAccount") bankAccount: String
+        @Body bookmarkRequest: BookMarkRequestDto
     ): BookMarkResponseDto
 
 }

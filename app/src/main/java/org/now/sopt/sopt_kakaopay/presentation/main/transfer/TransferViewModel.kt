@@ -54,10 +54,7 @@ class TransferViewModel(private val apiService: ApiService) : ViewModel() {
     fun deleteBookmark(bookmarkRequest: BookMarkRequestDto) {
         viewModelScope.launch {
             try {
-                val response = apiService.deleteBookmark(
-                    bank = bookmarkRequest.bank,
-                    bankAccount = bookmarkRequest.bankAccount
-                )
+                val response = apiService.deleteBookmark(bookmarkRequest)
                 handleBookmarkResponse(response)
             } catch (e: Exception) {
                 _transactionUiState.value = UiState.Error("Failed to delete bookmark: ${e.message}")

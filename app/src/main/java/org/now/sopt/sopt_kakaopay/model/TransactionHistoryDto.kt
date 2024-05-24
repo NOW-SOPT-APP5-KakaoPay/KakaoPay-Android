@@ -13,4 +13,8 @@ data class TransactionHistoryDto(
     val name: String,
     @SerialName("bookmark")
     val bookmark: Boolean
-)
+){
+    fun toggleBookmark(): TransactionHistoryDto {
+        return copy(bookmark = bookmark)
+    }
+}

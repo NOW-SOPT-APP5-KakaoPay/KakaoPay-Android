@@ -1,6 +1,5 @@
 package org.now.sopt.sopt_kakaopay.presentation.main.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,6 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import org.now.sopt.sopt_kakaopay.DotsIndicatorDecoration
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
-import org.now.sopt.sopt_kakaopay.presentation.PaymentBottomSheetFragment
-import org.now.sopt.sopt_kakaopay.presentation.main.transfer.TransferActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -90,3 +87,4 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 }
+

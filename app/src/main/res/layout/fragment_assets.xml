@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".presentation.main.assets.AssetsFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.main.assets.AssetsFragment">
 
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/grey200"
         tools:ignore="MissingConstraints">
         <LinearLayout
-            android:layout_width="360dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:paddingStart="20dp"
@@ -54,23 +54,24 @@
 
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginTop="9dp">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:layout_width="331dp"
+                    android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/border_yellow"
-                    android:gravity="center_vertical"
-                    android:layoutDirection="ltr"
+                    android:gravity="center_vertical|center_horizontal"
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:paddingStart="20dp"
@@ -80,7 +81,7 @@
                     android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
@@ -90,25 +91,17 @@
                             android:layout_width="53dp"
                             android:layout_height="27dp"
                             android:layout_gravity="left"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="27dp"
-                            android:text="모은 돈"
-                            android:textColor="@android:color/black"
-                            android:textFontWeight="700"
-                            android:textSize="18sp" />
+                            android:text="@string/asset_saved_title"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="109dp"
                             android:layout_height="20dp"
                             android:layout_gravity="left"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="19.5dp"
-                            android:text="보험부터 부동산까지"
-                            android:textColor="@android:color/black"
-                            android:textFontWeight="400"
-                            android:textSize="13sp" />
+                            android:text="@string/asset_saved_description"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Regular"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -121,22 +114,16 @@
                             android:id="@+id/txv_asset_saved"
                             android:layout_width="110dp"
                             android:layout_height="27dp"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="27dp"
-                            android:text="20,007,500원"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:text="@string/asset_saved_money"
                             android:textAlignment="textEnd"
-                            android:textColor="@android:color/black"
-                            android:textFontWeight="700"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/black" />
 
                         <ImageView
                             android:id="@+id/iv_asset_seesaved"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:contentDescription=""
                             android:paddingLeft="8dp"
                             android:paddingTop="5dp"
                             android:paddingRight="8dp"
@@ -146,7 +133,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="330dp"
+                    android:layout_width="match_parent"
                     android:layout_height="191dp"
                     android:layout_marginBottom="12dp"
                     android:orientation="vertical"
@@ -155,7 +142,7 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="67dp"
                         android:paddingStart="20dp"
                         android:paddingTop="20dp"
@@ -169,12 +156,9 @@
                             android:layout_width="33dp"
                             android:layout_height="27dp"
                             android:layout_weight="1"
-                            android:text="계좌"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@style/TextAppearance.Android.Head3"
-                            android:letterSpacing="-0.02"
-                            android:textColor="#737679"/>
+                            android:text="@string/asset_account"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/grey600"/>
 
                         <LinearLayout
                             android:id="@+id/btn_asset_seemoreaccount"
@@ -191,14 +175,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="23dp"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:text="더보기"
-                                android:textFontWeight="700"
-                                android:lineSpacingExtra="22.5dp"
-                                android:textColor="#008DFF"
-                                android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
 
                             <ImageView
                                 android:id="@+id/iv_asset_moreaccount"
@@ -208,12 +187,11 @@
                                 android:paddingTop="8dp"
                                 android:paddingEnd="8dp"
                                 android:paddingBottom="6dp"
-                                android:contentDescription=""
                                 android:src="@drawable/ic_right_chevron_blue"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
@@ -248,23 +226,16 @@
                                     android:layout_width="46dp"
                                     android:layout_height="18dp"
                                     android:layout_marginBottom="3dp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:letterSpacing="-0.02"
-                                    android:text="도훈 카뱅"
-                                    android:textFontWeight="400"
-                                    android:textColor="@color/grey600"
-                                    android:textSize="12sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Detail1Regular"
+                                    android:text="@string/asset_owner"
+                                    android:textColor="@color/grey600" />
 
                                 <TextView
                                     android:layout_width="51dp"
                                     android:layout_height="21dp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:letterSpacing="-0.02"
-                                    android:text="잔액보기"
-                                    android:textColor="@color/black"
-                                    android:textFontWeight="700"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_balance"
+                                    android:textColor="@color/black" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -275,11 +246,8 @@
                             android:layout_marginEnd="10dp"
                             android:padding="0dp"
                             android:includeFontPadding="false"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:text="송금"
-                            android:textSize="13sp"
-                            android:textFontWeight="700"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Bold"
+                            android:text="@string/asset_transfer"
                             android:background="@drawable/border_bluegrey"
                             android:textColor="@color/black"/>
 
@@ -287,7 +255,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="75dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="28dp"
@@ -300,11 +268,8 @@
                             android:layout_width="92dp"
                             android:layout_height="27dp"
                             android:layout_weight="1"
-                            android:text="포인트·머니"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@style/TextAppearance.Android.Head3"
-                            android:letterSpacing="-0.02"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:text="@string/asset_point"
                             android:textColor="@color/grey600"/>
 
                         <LinearLayout
@@ -317,14 +282,10 @@
                                 android:id="@+id/txv_asset_point"
                                 android:layout_width="wrap_content"
                                 android:layout_height="24dp"
-                                android:fontFamily="@style/TextAppearance.Android.Body1Bold"
-                                android:letterSpacing="-0.02"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
                                 android:layout_marginEnd="9dp"
-                                android:text="97원"
-                                android:textFontWeight="700"
                                 android:textColor="@color/grey600"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
+                                android:text="@string/asset_assetpoint" />
 
                             <ImageView
                                 android:id="@+id/iv_asset_seepoint"
@@ -338,7 +299,7 @@
 
 
                 <HorizontalScrollView
-                    android:layout_width="330dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp">
 
@@ -375,26 +336,33 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="이가인님 소식"
+                                    android:text="@string/asset_news"
                                     android:textSize="12sp"
                                     android:textFontWeight="400"
                                     android:fontFamily="@font/noto_sans_kr"
                                     android:lineSpacingExtra="16.34dp"
                                     android:textColor="@color/grey600"
                                     />
-
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="700"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="21dp"
-                                    android:text="1개 발견"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:layout_marginTop="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                        android:text="@string/asset_one"
+                                        android:textColor="@color/blue" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                        android:text="@string/asset_find"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -409,8 +377,7 @@
                                 android:layout_height="21dp"
                                 android:src="@drawable/ic_calendar"
                                 android:layout_marginTop="21dp"
-                                android:layout_marginStart="22dp"
-                                android:contentDescription="" />
+                                android:layout_marginStart="22dp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -425,7 +392,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="2일 후"
+                                    android:text="@string/asset_two"
                                     android:textFontWeight="400"
                                     android:textSize="12sp"
                                     android:fontFamily="@font/noto_sans_kr"
@@ -437,15 +404,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="카드값 내는 날"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:textFontWeight="700"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:lineSpacingExtra="21dp"
-                                    android:letterSpacing="-0.02"
-                                    android:layout_gravity="left"
-                                    android:textColor="@android:color/black"
+                                    android:text="@string/asset_card"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:textColor="@color/black"
                                     />
                             </LinearLayout>
                         </LinearLayout>
@@ -476,7 +437,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="신용점수"
+                                    android:text="@string/asset_score"
                                     android:textFontWeight="400"
                                     android:textSize="12sp"
                                     android:fontFamily="@font/noto_sans_kr"
@@ -488,28 +449,23 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="NICE 894"
-                                    android:textSize="14sp"
-                                    android:textFontWeight="700"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:lineSpacingExtra="21dp"
-                                    android:letterSpacing="-0.02"
-                                    android:layout_gravity="left"
-                                    android:textColor="@android:color/black"
+                                    android:text="@string/asset_nice"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:textColor="@color/black"
                                     />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@drawable/border_white"
                     android:layout_marginBottom="12dp"
                     android:gravity="center_vertical|center_horizontal">
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="61dp"
                         android:paddingStart="20dp"
                         android:paddingTop="18dp"
@@ -520,13 +476,9 @@
                             android:layout_width="37dp"
                             android:layout_height="27dp"
                             android:layout_weight="1"
-                            android:text="쓴 돈"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:lineSpacingExtra="27dp"
-                            android:textColor="@color/black"
-                            android:letterSpacing="-0.02"/>
+                            android:text="@string/asset_use"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/black" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -537,13 +489,8 @@
                             <TextView
                                 android:layout_width="53dp"
                                 android:layout_height="24dp"
-                                android:text="오늘 0건"
-                                android:textSize="15sp"
-                                android:textFontWeight="700"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:lineSpacingExtra="22.5dp"
-                                android:letterSpacing="-0.02"
-                                android:textAlignment="textEnd"
+                                android:text="@string/asset_today"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
                                 android:textColor="@color/grey600"/>
 
                             <ImageView
@@ -557,11 +504,11 @@
                         </LinearLayout>
                     </LinearLayout>
                     <View
-                        android:layout_width="305dp"
+                        android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/blue_grey400" />
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="79dp"
                         android:paddingStart="20dp"
                         android:paddingTop="16dp"
@@ -593,25 +540,17 @@
                                     android:layout_height="17dp"
                                     android:layout_gravity="left"
                                     android:layout_marginBottom="5dp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:letterSpacing="-0.03"
-                                    android:lineSpacingExtra="16.8dp"
-                                    android:text="어디에"
-                                    android:textFontWeight="400"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                    android:text="@string/asset_where"
+                                    android:textColor="@color/black" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:letterSpacing="-0.03"
-                                    android:lineSpacingExtra="19.2dp"
-                                    android:text="많이 쓰는 타입인가요?"
-                                    android:textColor="@color/black"
-                                    android:textFontWeight="600"
-                                    android:textSize="16sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Head4"
+                                    android:text="@string/asset_question"
+                                    android:textColor="@color/black" />
                             </LinearLayout>
                         </LinearLayout>
                         <android.widget.Button
@@ -622,21 +561,17 @@
                             android:paddingEnd="13dp"
                             android:paddingBottom="5dp"
                             android:includeFontPadding="false"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="19.5dp"
-                            android:text="분석"
-                            android:textSize="13sp"
-                            android:textFontWeight="700"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Bold"
+                            android:text="@string/asset_analysis"
                             android:background="@drawable/border_bluegrey"
                             android:textColor="@color/black"/>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp">
                         <LinearLayout
-                            android:layout_width="314dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingStart="15dp"
                             android:paddingTop="17dp"
@@ -652,13 +587,9 @@
                                 android:layout_width="142dp"
                                 android:layout_height="21dp"
                                 android:layout_marginStart="7dp"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="이번 달 카드 이용금액은?"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp"/>
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_month"
+                                android:textColor="@color/black" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -666,14 +597,14 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@drawable/border_white"
                     android:layout_marginBottom="12dp"
                     android:gravity="center_vertical|center_horizontal">
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingStart="20dp"
                         android:paddingTop="18dp"
@@ -686,13 +617,8 @@
                             android:layout_width="69dp"
                             android:layout_height="27dp"
                             android:layout_weight="1"
-                            android:text="투자한 돈"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:textColor="@color/black"
-                            android:lineSpacingExtra="27dp"
-                            android:letterSpacing="-0.02"/>
+                            android:text="@string/asset_investment"
+                            android:textAppearance="@style/TextAppearance.Android.Head3" />
                         <LinearLayout
                             android:id="@+id/li_asset_investment"
                             android:layout_width="80dp"
@@ -707,13 +633,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="23dp"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:text="더보기"
-                                android:lineSpacingExtra="22.5dp"
-                                android:textColor="@color/blue"
-                                android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
                             <ImageView
                                 android:layout_width="22dp"
                                 android:layout_height="24dp"
@@ -726,11 +648,11 @@
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp">
                         <LinearLayout
-                            android:layout_width="314dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingStart="15dp"
                             android:paddingTop="17dp"
@@ -754,30 +676,40 @@
                                     android:layout_weight="1"
                                     android:layout_gravity="center_vertical"
                                     >
-
-                                    <TextView
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="21dp"
-                                        android:text="흥미로운 투자소식 5개 있어요"
-                                        android:textSize="14sp"
-                                        android:textFontWeight="700"
-                                        android:fontFamily="@font/noto_sans_kr"
-                                        android:lineSpacingExtra="21dp"
-                                        android:letterSpacing="-0.02"
-                                        android:layout_gravity="left"
-                                        android:textColor="@color/black"
-                                        />
+                                        android:layout_height="21dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:text="@string/asset_interest"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/black"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="@string/asset_five"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/orange"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="@string/asset_have"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/black"
+                                            />
+
+                                    </LinearLayout>
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="20dp"
-                                        android:text="커뮤니티 보기"
-                                        android:textSize="13sp"
-                                        android:textFontWeight="400"
-                                        android:fontFamily="@font/noto_sans_kr"
-                                        android:lineSpacingExtra="19.5dp"
-                                        android:letterSpacing="-0.02"
-                                        android:layout_gravity="left"
+                                        android:text="@string/asset_community"
+                                        android:textAppearance="@style/TextAppearance.Android.Body3Regular"
                                         android:textColor="@color/grey600"
                                         />
                                 </LinearLayout>
@@ -788,14 +720,14 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/border_white"
                     android:gravity="center_vertical|center_horizontal">
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:paddingStart="20dp"
                         android:paddingTop="18dp"
@@ -807,13 +739,8 @@
                             android:layout_width="53dp"
                             android:layout_height="27dp"
                             android:layout_weight="1"
-                            android:text="빌린 돈"
-                            android:textSize="18sp"
-                            android:textFontWeight="700"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:textColor="@color/black"
-                            android:lineSpacingExtra="27dp"
-                            android:letterSpacing="-0.02"/>
+                            android:text="@string/asset_lend"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"/>
                         <LinearLayout
                             android:layout_width="80dp"
                             android:layout_height="39dp"
@@ -827,13 +754,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="23dp"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:text="더보기"
-                                android:lineSpacingExtra="22.5dp"
-                                android:textColor="@color/blue"
-                                android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
                             <ImageView
                                 android:layout_width="22dp"
                                 android:layout_height="24dp"
@@ -846,11 +769,11 @@
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp">
                         <LinearLayout
-                            android:layout_width="314dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingStart="15dp"
                             android:paddingTop="17dp"
@@ -878,26 +801,16 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="21dp"
-                                        android:text="다가오는 대출 상환일정"
-                                        android:textSize="14sp"
-                                        android:textFontWeight="700"
-                                        android:fontFamily="@font/noto_sans_kr"
-                                        android:lineSpacingExtra="21dp"
-                                        android:letterSpacing="-0.02"
-                                        android:layout_gravity="left"
+                                        android:text="@string/asset_coming"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
                                         android:textColor="@color/black"
                                         />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="20dp"
-                                        android:text="매달 갚는 금액 확인하기"
-                                        android:textSize="13sp"
-                                        android:textFontWeight="400"
-                                        android:fontFamily="@font/noto_sans_kr"
-                                        android:lineSpacingExtra="19.5dp"
-                                        android:letterSpacing="-0.02"
-                                        android:layout_gravity="left"
+                                        android:text="@string/asset_check"
+                                        android:textAppearance="@style/TextAppearance.Android.Body3Regular"
                                         android:textColor="@color/grey600"
                                         />
                                 </LinearLayout>
@@ -907,7 +820,7 @@
                 </LinearLayout>
 
                 <HorizontalScrollView
-                    android:layout_width="345dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
@@ -946,12 +859,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:text="우리 부부 재태크 시작"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="400"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="19.5dp"
+                                    android:text="@string/asset_parent"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
                                     android:textColor="@color/grey600"
                                     />
 
@@ -959,13 +868,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="700"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="21dp"
-                                    android:text="함께하는 자산관리"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_together" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -999,26 +903,18 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:text="스스로 지키는 노후"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="400"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="19.5dp"
+                                    android:text="@string/asset_old"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
                                     android:textColor="@color/grey600"
                                     />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
                                     android:layout_gravity="center_horizontal"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="700"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="21dp"
-                                    android:text="연금·퇴직연금"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:text="@string/asset_annuity"
+                                    android:textColor="@color/black" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -1052,12 +948,8 @@
                                     android:layout_width="129dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:text="주택청약 당첨 가능성은?"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="400"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="19.5dp"
+                                    android:text="@string/asset_house"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
                                     android:textColor="@color/grey600"
                                     />
 
@@ -1065,13 +957,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="700"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="21dp"
-                                    android:text="내 청약 진단하기"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_apartment"
+                                    android:textColor="@color/black" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -1105,12 +993,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:text="대출이 필요하다면"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="400"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="19.5dp"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                    android:text="@string/asset_loan"
                                     android:textColor="@color/grey600"
                                     />
 
@@ -1118,19 +1002,15 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:fontFamily="@font/noto_sans_kr"
-                                    android:textFontWeight="700"
-                                    android:letterSpacing="-0.02"
-                                    android:lineSpacingExtra="21dp"
-                                    android:text="신용점수 올리기"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_raise"
+                                    android:textColor="@color/black" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
                 <LinearLayout
-                    android:layout_width="330dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="9dp"
                     android:paddingTop="30dp"
@@ -1140,22 +1020,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/noto_sans_kr"
-                        android:letterSpacing="-0.02"
-                        android:lineSpacingExtra="33dp"
-                        android:text="자산 바로가기"
-                        android:textColor="@color/black"
-                        android:textFontWeight="700"
-                        android:textSize="22sp" />
+                        android:textAppearance="@style/TextAppearance.Android.Head1"
+                        android:text="@string/asset_go_asset"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:layout_width="330dp"
+                    android:layout_width="match_parent"
                     android:layout_height="324dp"
                     android:background="@drawable/border_white"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_horizontal|center_vertical"
                     android:orientation="vertical"
                     android:paddingStart="20dp"
                     android:paddingTop="18dp"
@@ -1163,15 +1039,14 @@
                     android:paddingBottom="18dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:layout_marginBottom="20dp"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1187,15 +1062,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="10dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="계좌"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_account"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1209,10 +1080,13 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
+
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -1227,15 +1101,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="카드"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_card"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1251,14 +1121,14 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1271,18 +1141,14 @@
                                 android:src="@drawable/ic_go_to_fund" />
 
                             <TextView
-                                android:layout_width="26dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="주식·펀드"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_fund"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1296,9 +1162,11 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1314,12 +1182,13 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
                                 android:fontFamily="@font/noto_sans_kr"
                                 android:letterSpacing="-0.02"
                                 android:lineSpacingExtra="21dp"
-                                android:text="보험"
+                                android:text="@string/asset_go_insurance"
                                 android:textColor="@color/black"
                                 android:textFontWeight="400"
                                 android:textSize="14sp" />
@@ -1337,15 +1206,16 @@
                         </LinearLayout>
                     </LinearLayout>
 
+
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1361,15 +1231,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="10dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="대출"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_loan"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1383,10 +1249,13 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
+
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -1401,15 +1270,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="포인트·머니"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_point"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1425,14 +1290,14 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1445,23 +1310,19 @@
                                 android:src="@drawable/ic_go_to_annuity" />
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="10dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="연금·퇴직연금"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_annuity"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginStart="2dp"
+                                android:layout_marginStart="6dp"
                                 android:layout_marginTop="4dp"
                                 android:paddingStart="8dp"
                                 android:paddingTop="6dp"
@@ -1470,10 +1331,13 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
+
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -1488,15 +1352,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="통신"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_community"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1512,14 +1372,14 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1532,18 +1392,14 @@
                                 android:src="@drawable/ic_go_to_car" />
 
                             <TextView
-                                android:layout_width="26dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="10dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="자동차"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_car"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1557,10 +1413,13 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
+
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -1575,15 +1434,11 @@
                                 android:layout_width="26dp"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="9dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/noto_sans_kr"
-                                android:letterSpacing="-0.02"
-                                android:lineSpacingExtra="21dp"
-                                android:text="부동산"
-                                android:textColor="@color/black"
-                                android:textFontWeight="400"
-                                android:textSize="14sp" />
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_realestate"
+                                android:textColor="@color/black" />
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1598,14 +1453,15 @@
                         </LinearLayout>
                     </LinearLayout>
 
+
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal">
@@ -1618,15 +1474,16 @@
                                 android:src="@drawable/ic_go_to_other" />
 
                             <TextView
-                                android:layout_width="26dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="21dp"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="6dp"
                                 android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
                                 android:fontFamily="@font/noto_sans_kr"
                                 android:letterSpacing="-0.02"
                                 android:lineSpacingExtra="21dp"
-                                android:text="기타자산"
+                                android:text="@string/asset_go_except"
                                 android:textColor="@color/black"
                                 android:textFontWeight="400"
                                 android:textSize="14sp" />
@@ -1643,9 +1500,11 @@
                                 android:src="@drawable/ic_right_chevron_gray" />
 
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
                         <LinearLayout
-                            android:layout_width="140dp"
+                            android:layout_width="150dp"
                             android:layout_height="28dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="horizontal"></LinearLayout>
@@ -1657,26 +1516,17 @@
                     android:layout_marginTop="45dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/noto_sans_kr"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="22.5dp"
-                    android:text="놓친 자산은 없을까?"
-                    android:textColor="@color/black"
-                    android:textFontWeight="700"
-                    android:textSize="15sp" />
+                    android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                    android:text="@string/asset_miss"
+                    android:textColor="@color/black" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_marginTop="7dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/noto_sans_kr"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="19.5dp"
-                    android:text="빈틈없는 관리를 위해 빠진 자산을 찾아보세요"
-                    android:textColor="@color/black"
-                    android:textFontWeight="400"
-                    android:textSize="13sp" />
+                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                    android:text="@string/asset_find_miss" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1699,13 +1549,9 @@
                         android:layout_height="21dp"
                         android:layout_marginStart="6dp"
                         android:layout_gravity="center_vertical"
-                        android:fontFamily="@font/noto_sans_kr"
-                        android:letterSpacing="-0.02"
-                        android:lineSpacingExtra="21dp"
-                        android:text="자산 찾아보기"
-                        android:textColor="@color/black"
-                        android:textFontWeight="700"
-                        android:textSize="14sp" />
+                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                        android:text="@string/asset_find_asset"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -1724,13 +1570,9 @@
                             android:layout_width="67dp"
                             android:layout_height="21dp"
                             android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="21dp"
-                            android:text="자산 숨기기"
-                            android:textColor="@color/grey600"
-                            android:textFontWeight="700"
-                            android:textSize="14sp" />
+                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                            android:text="@string/asset_hide_asset"
+                            android:textColor="@color/grey600" />
                         <View
                             android:layout_width="65dp"
                             android:layout_height="1dp"
@@ -1746,19 +1588,15 @@
                             android:layout_width="51dp"
                             android:layout_height="21dp"
                             android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/noto_sans_kr"
-                            android:letterSpacing="-0.02"
-                            android:lineSpacingExtra="21dp"
-                            android:text="설정하기"
-                            android:textColor="@color/grey600"
-                            android:textFontWeight="700"
-                            android:textSize="14sp" />
+                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                            android:text="@string/asset_setting"
+                            android:textColor="@color/grey600" />
                         <View
                             android:layout_width="50dp"
                             android:layout_height="1dp"
                             android:background="@color/blue_grey500" />
                     </LinearLayout>
-                    </LinearLayout>
+                </LinearLayout>
 
 
 

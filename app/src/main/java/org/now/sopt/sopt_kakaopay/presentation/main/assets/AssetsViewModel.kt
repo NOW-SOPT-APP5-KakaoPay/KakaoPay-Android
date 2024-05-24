@@ -21,7 +21,7 @@ class AssetsViewModel(private val apiService: ApiService) : ViewModel() {
                 val response = apiService.fetchBalance()
                 if (response.isSuccessful) {
                     val serverResponse = response.body()
-                    if (serverResponse != null && serverResponse.data.payMoney.isNotEmpty()) {
+                    if (serverResponse != null && serverResponse.data.balance.isNotEmpty()) {
                         UiState.Success(serverResponse.data)
                     } else {
                         UiState.Empty

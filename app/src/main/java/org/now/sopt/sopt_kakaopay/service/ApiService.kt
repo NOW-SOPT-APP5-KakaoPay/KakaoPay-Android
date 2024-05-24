@@ -2,6 +2,8 @@ package org.now.sopt.sopt_kakaopay.service
 
 import org.now.sopt.sopt_kakaopay.model.BookMarkRequestDto
 import org.now.sopt.sopt_kakaopay.model.BookMarkResponseDto
+import org.now.sopt.sopt_kakaopay.model.ResponsePayMoneyDto
+import org.now.sopt.sopt_kakaopay.model.ResponsePayPointDto
 import org.now.sopt.sopt_kakaopay.model.TransactionHistoryResponseDto
 import retrofit2.Response
 import retrofit2.http.Body
@@ -23,4 +25,11 @@ interface ApiService {
         @Body bookmarkRequest: BookMarkRequestDto
     ): BookMarkResponseDto
 
+    @GET("api/v1/member/paypoint")
+    suspend fun getPayPoint(
+    ): ResponsePayPointDto
+
+    @GET("api/v1/member/paymoney")
+    suspend fun getPayMoney(
+    ): ResponsePayMoneyDto
 }

@@ -29,99 +29,113 @@
 
     <style name="TextAppearance.Android.Head1" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
+        <item name="android:letterSpacing">-0.02</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">33sp</item>
     </style>
 
     <style name="TextAppearance.Android.Head2" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">30sp</item>
     </style>
 
     <style name="TextAppearance.Android.Head3" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">27sp</item>
     </style>
 
     <style name="TextAppearance.Android.Head4" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">24sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body1Bold" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">22.5sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body1Regular" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:lineHeight">22.5sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body2Bold" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">21sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body2Regular" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:lineHeight">21sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body3Bold" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">13sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">19.5sp</item>
     </style>
 
     <style name="TextAppearance.Android.Body3Regular" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">13sp</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:lineHeight">19.5sp</item>
     </style>
 
     <style name="TextAppearance.Android.Detail1Bold" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">18sp</item>
     </style>
 
     <style name="TextAppearance.Android.Detail1Regular" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:lineHeight">18sp</item>
     </style>
 
     <style name="TextAppearance.Android.Detail2Bold" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">10sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">700</item>
         <item name="android:lineHeight">15sp</item>
     </style>
 
     <style name="TextAppearance.Android.Detail2Regular" parent="TextAppearance.Android">
         <item name="android:fontFamily">@font/noto_sans_kr</item>
         <item name="android:textSize">10sp</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:lineHeight">15sp</item>
     </style>
 

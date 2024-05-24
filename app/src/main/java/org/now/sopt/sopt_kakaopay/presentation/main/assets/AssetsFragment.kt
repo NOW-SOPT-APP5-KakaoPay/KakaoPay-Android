@@ -9,12 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
-import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.ServicePool
 import org.now.sopt.sopt_kakaopay.databinding.FragmentAssetsBinding
-import org.now.sopt.sopt_kakaopay.databinding.FragmentBenefitsBinding
-import org.now.sopt.sopt_kakaopay.presentation.main.transfer.TransferViewModel
-import org.now.sopt.sopt_kakaopay.presentation.main.transfer.TransferViewModelFactory
 import org.now.sopt.sopt_kakaopay.util.fragment.showToast
 import org.now.sopt.sopt_kakaopay.util.view.UiState
 

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import org.now.sopt.sopt_kakaopay.DotsIndicatorDecoration
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.FragmentHomeBinding
-import org.now.sopt.sopt_kakaopay.presentation.PaymentBottomSheetFragment
+import org.now.sopt.sopt_kakaopay.presentation.main.payment.PaymentBottomSheetFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.transfer.TransferActivity
 
 class HomeFragment : Fragment() {

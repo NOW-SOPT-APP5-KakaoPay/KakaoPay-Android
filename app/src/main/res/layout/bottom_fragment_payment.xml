@@ -163,6 +163,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_payment_pay_money_title" />
 
             <TextView
+                android:id="@+id/tv_payment_pay_money_amount"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="0원"

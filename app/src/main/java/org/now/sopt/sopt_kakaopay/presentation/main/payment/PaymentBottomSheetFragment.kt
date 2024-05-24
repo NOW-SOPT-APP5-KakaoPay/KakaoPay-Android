@@ -1,4 +1,4 @@
-package org.now.sopt.sopt_kakaopay.presentation
+package org.now.sopt.sopt_kakaopay.presentation.main.payment
 
 import android.app.Dialog
 import android.os.Bundle
@@ -7,25 +7,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import org.now.sopt.sopt_kakaopay.R
-import org.now.sopt.sopt_kakaopay.databinding.FragmentPaymentBinding
+import org.now.sopt.sopt_kakaopay.ServicePool
+import org.now.sopt.sopt_kakaopay.databinding.BottomFragmentPaymentBinding
 
 class PaymentBottomSheetFragment : BottomSheetDialogFragment() {
 
-    private var _binding: FragmentPaymentBinding? = null
-    private val binding: FragmentPaymentBinding
+    private var _binding: BottomFragmentPaymentBinding? = null
+    private val binding: BottomFragmentPaymentBinding
         get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
     private var originalStatusBarColor: Int = 0
+
+    private val viewModel: PaymentViewModel by viewModels {
+        PaymentViewModelFactory(ServicePool.authService)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPaymentBinding.inflate(inflater, container, false)
+        _binding = BottomFragmentPaymentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,6 +40,14 @@ class PaymentBottomSheetFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupCustomSwitch()
         setupOptions()
+        viewModel.payMoneyData.observe(viewLifecycleOwner, Observer { payMoney ->
+            binding.tvPaymentPayMoneyAmount.text = payMoney
+        })
+        viewModel.payPointData.observe(viewLifecycleOwner, Observer { payPoint ->
+            binding.tvPaymentPayMoneyAmount.text = payPoint
+        })
+        viewModel.fetchPayPoint()
+        viewModel.fetchPayMoney()
     }
 
     private fun setupCustomSwitch() {

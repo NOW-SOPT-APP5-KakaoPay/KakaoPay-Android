@@ -2,7 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF3C3C</color>
+    <color name="pink">#FFF0F0</color>
+    <color name="blue">#008DFF</color>
+    <color name="light_blue">#E5F3FF</color>
+    <color name="orange">#FF7143</color>
 
-    <color name="custom_color">#FFFFFFFF</color>
+    <!-- YELLOW -->
+    <color name="yellow">#FFEB00</color>
+    <color name="yellow_dark">#FFDB00</color>
+    <color name="yellow_light">#FFF68F</color>
 
+    <!--GREY-->
+    <color name="grey600">#737679</color>
+    <color name="grey500">#BFC0C2</color>
+    <color name="grey400">#D7D8D9</color>
+    <color name="grey300">#E9E9EA</color>
+    <color name="grey200">#F3F4F5</color>
+    <color name="blue_grey500">#ADB5BD</color>
+    <color name="blue_grey400">#E9ECEF</color>
 </resources>

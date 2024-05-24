@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.main.benefits.BenefitsFragment">
+
+    <!-- 상단 AppBarLayout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/al_transfer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_transfer_container"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin">
+
+            <!-- ConstraintLayout for flexible button positioning -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 뒤로가기 버튼 -->
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_transfer_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_left_arrow_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 블루투스 문구 -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_transfer_bluetooth_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bluetooth_message"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_transfer_bluetooth"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 블루투스 버튼 -->
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_transfer_bluetooth"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bluetooth"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_transfer_options"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 옵션 버튼 -->
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_transfer_options"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_more_android"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- TapHost 이미지-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_transfer_category"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_send_top" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 메인 콘텐츠 포함 NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="57dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@id/cl_transfer_bottom_container"
+        app:layout_constraintTop_toBottomOf="@id/al_transfer_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- account header-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_transfer_account_header"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_transfer_my_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="내 계좌"
+                    android:textAppearance="@style/TextAppearance.Android.Detail1Regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:text="+1개"
+                    android:textAppearance="@style/TextAppearance.Android.Detail1Regular"
+                    android:textColor="@color/grey600"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_transfer_my_account"
+                    app:layout_constraintEnd_toStartOf="@id/iv_transfer_dropdown"
+                    app:layout_constraintTop_toTopOf="@id/tv_transfer_my_account" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_transfer_dropdown"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_dropdown"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 계좌 추가 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_transfer_add_account"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_transfer_account_header">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_transfer_add_account"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="22dp"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_add_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:text="계좌추가"
+                    android:textAppearance="@style/TextAppearance.Android.Body3Bold"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_transfer_add_account"
+                    app:layout_constraintStart_toEndOf="@id/iv_transfer_add_account"
+                    app:layout_constraintTop_toTopOf="@id/iv_transfer_add_account" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Loading -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- 최근 계좌 목록-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_transfer_recent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_transfer_add_account">
+
+                <TextView
+                    android:id="@+id/tv_transfer_recent"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="22dp"
+                    android:gravity="center_vertical"
+                    android:text="최근"
+                    android:textAppearance="@style/TextAppearance.Android.Detail1Regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_transfer_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_transfer_recent"
+                    tools:listitem="@layout/item__recent_account" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 하단 버튼 영역 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_transfer_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cd_transfer_qr"
+            android:layout_width="112dp"
+            android:layout_height="57dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="28.5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_transfer_input_number"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:strokeColor="@color/blue_grey400"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_qr_scan" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_transfer_input_number"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector_input_number"
+            android:text="계좌번호 입력"
+            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cd_transfer_qr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

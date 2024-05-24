@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.main.assets.AssetsFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/grey200"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingStart="20dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="1dp">
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="29dp"
+                android:src="@drawable/ic_kakaopay_logo" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_search"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_notif_number"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_setting"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="9dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/border_yellow"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="35dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="36dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="53dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="left"
+                            android:text="@string/asset_saved_title"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="109dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="left"
+                            android:text="@string/asset_saved_description"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Regular"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_asset_saved"
+                            android:layout_width="110dp"
+                            android:layout_height="27dp"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:text="@string/asset_saved_money"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_asset_seesaved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="6dp"
+                            android:src="@drawable/ic_right_chevron_black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="191dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:background="@drawable/border_white"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/account_title"
+                            android:layout_width="33dp"
+                            android:layout_height="27dp"
+                            android:layout_weight="1"
+                            android:text="@string/asset_account"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/grey600"/>
+
+                        <LinearLayout
+                            android:id="@+id/btn_asset_seemoreaccount"
+                            android:layout_width="80dp"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="9dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
+
+                            <ImageView
+                                android:id="@+id/iv_asset_moreaccount"
+                                android:layout_width="22dp"
+                                android:layout_height="24dp"
+                                android:paddingStart="9dp"
+                                android:paddingTop="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="6dp"
+                                android:src="@drawable/ic_right_chevron_blue"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="13dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="13dp"
+                        android:paddingBottom="5dp">
+
+
+                        <LinearLayout
+                            android:layout_width="97dp"
+                            android:layout_height="42dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_asset_bank"
+                                android:layout_width="34dp"
+                                android:layout_height="33.29dp"
+                                android:layout_marginEnd="12dp"
+                                android:src="@drawable/ic_kakaobank_logo" />
+
+                            <LinearLayout
+                                android:layout_width="51dp"
+                                android:layout_height="42dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txv_asset_bank"
+                                    android:layout_width="46dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:textAppearance="@style/TextAppearance.Android.Detail1Regular"
+                                    android:text="@string/asset_owner"
+                                    android:textColor="@color/grey600" />
+
+                                <TextView
+                                    android:layout_width="51dp"
+                                    android:layout_height="21dp"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_balance"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.widget.Button
+                            android:id="@+id/btn_asset_transfer"
+                            android:layout_width="50dp"
+                            android:layout_height="29dp"
+                            android:layout_marginEnd="10dp"
+                            android:padding="0dp"
+                            android:includeFontPadding="false"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Bold"
+                            android:text="@string/asset_transfer"
+                            android:background="@drawable/border_bluegrey"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="28dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="92dp"
+                            android:layout_height="27dp"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:text="@string/asset_point"
+                            android:textColor="@color/grey600"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="31dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal|center_vertical">
+
+                            <TextView
+                                android:id="@+id/txv_asset_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="24dp"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:layout_marginEnd="9dp"
+                                android:textColor="@color/grey600"
+                                android:text="@string/asset_assetpoint" />
+
+                            <ImageView
+                                android:id="@+id/iv_asset_seepoint"
+                                android:layout_width="8dp"
+                                android:layout_height="31dp"
+                                android:src="@drawable/ic_right_chevron_gray_large" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="129dp"
+                            android:layout_height="119dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="21dp"
+                                android:src="@drawable/ic_choonsik"
+                                android:layout_marginTop="21dp"
+                                android:layout_marginStart="19dp"
+                                android:contentDescription="" />
+
+                            <LinearLayout
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="@string/asset_news"
+                                    android:textSize="12sp"
+                                    android:textFontWeight="400"
+                                    android:fontFamily="@font/noto_sans_kr"
+                                    android:lineSpacingExtra="16.34dp"
+                                    android:textColor="@color/grey600"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                        android:text="@string/asset_one"
+                                        android:textColor="@color/blue" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                        android:text="@string/asset_find"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="129dp"
+                            android:layout_height="119dp"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical">
+                            <ImageView
+                                android:layout_width="19dp"
+                                android:layout_height="21dp"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_marginTop="21dp"
+                                android:layout_marginStart="22dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="@string/asset_two"
+                                    android:textFontWeight="400"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/noto_sans_kr"
+                                    android:lineSpacingExtra="16.34dp"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/asset_card"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="129dp"
+                            android:layout_height="119dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical">
+                            <ImageView
+                                android:layout_width="20.22dp"
+                                android:layout_height="17dp"
+                                android:src="@drawable/ic_credit_score"
+                                android:layout_marginTop="23dp"
+                                android:layout_marginStart="22dp"
+                                android:contentDescription="" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="@string/asset_score"
+                                    android:textFontWeight="400"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/noto_sans_kr"
+                                    android:lineSpacingExtra="16.34dp"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/asset_nice"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_white"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical|center_horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="37dp"
+                            android:layout_height="27dp"
+                            android:layout_weight="1"
+                            android:text="@string/asset_use"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="53dp"
+                                android:layout_height="24dp"
+                                android:text="@string/asset_today"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:textColor="@color/grey600"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="12dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="12dp"
+                                android:paddingBottom="10dp"
+                                android:src="@drawable/ic_right_chevron_gray_large"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_grey400" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="18dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="43dp"
+                                android:layout_height="44dp"
+                                android:src="@drawable/img_analyze" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="13dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="17dp"
+                                    android:layout_gravity="left"
+                                    android:layout_marginBottom="5dp"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                    android:text="@string/asset_where"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:textAppearance="@style/TextAppearance.Android.Head4"
+                                    android:text="@string/asset_question"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <android.widget.Button
+                            android:layout_width="50dp"
+                            android:layout_height="29dp"
+                            android:paddingStart="13dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="13dp"
+                            android:paddingBottom="5dp"
+                            android:includeFontPadding="false"
+                            android:textAppearance="@style/TextAppearance.Android.Body3Bold"
+                            android:text="@string/asset_analysis"
+                            android:background="@drawable/border_bluegrey"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="17dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="17dp"
+                            android:gravity="center_vertical"
+                            android:background="@color/grey200">
+                            <ImageView
+                                android:layout_width="31dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_april"/>
+                            <TextView
+                                android:layout_width="142dp"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="7dp"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_month"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_white"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical|center_horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginTop="-2.5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="69dp"
+                            android:layout_height="27dp"
+                            android:layout_weight="1"
+                            android:text="@string/asset_investment"
+                            android:textAppearance="@style/TextAppearance.Android.Head3" />
+                        <LinearLayout
+                            android:id="@+id/li_asset_investment"
+                            android:layout_width="80dp"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="9dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="24dp"
+                                android:paddingStart="9dp"
+                                android:paddingTop="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="6dp"
+                                android:contentDescription=""
+                                android:src="@drawable/ic_right_chevron_blue"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="17dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="17dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/border_grey">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/img_infobox2"
+                                    android:layout_marginEnd="11dp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_vertical"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="21dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:text="@string/asset_interest"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/black"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="@string/asset_five"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/orange"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="21dp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="@string/asset_have"
+                                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                            android:textColor="@color/black"
+                                            />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="@string/asset_community"
+                                        android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                        android:textColor="@color/grey600"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/border_white"
+                    android:gravity="center_vertical|center_horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="53dp"
+                            android:layout_height="27dp"
+                            android:layout_weight="1"
+                            android:text="@string/asset_lend"
+                            android:textAppearance="@style/TextAppearance.Android.Head3"/>
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="39dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="9dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                                android:text="@string/asset_more"
+                                android:textColor="@color/blue" />
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="24dp"
+                                android:paddingStart="9dp"
+                                android:paddingTop="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="6dp"
+                                android:contentDescription=""
+                                android:src="@drawable/ic_right_chevron_blue"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="17dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="17dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/border_grey">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/img_infobox"
+                                    android:layout_marginEnd="11dp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="21dp"
+                                        android:text="@string/asset_coming"
+                                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                        android:textColor="@color/black"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="@string/asset_check"
+                                        android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                        android:textColor="@color/grey600"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical|center_horizontal">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="12dp"
+                                android:contentDescription=""
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/img_assetcard1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/asset_parent"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_together" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical|center_horizontal">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="12dp"
+                                android:contentDescription=""
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/img_assetcard2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/asset_old"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/asset_annuity"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical|center_horizontal">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="12dp"
+                                android:contentDescription=""
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/img_assetcard3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="129dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/asset_house"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_apartment"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border_white"
+                            android:layout_gravity="center_vertical|center_horizontal">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="12dp"
+                                android:contentDescription=""
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/img_assetcard4" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                                    android:text="@string/asset_loan"
+                                    android:textColor="@color/grey600"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                                    android:text="@string/asset_raise"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="9dp"
+                    android:paddingTop="30dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Android.Head1"
+                        android:text="@string/asset_go_asset"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="324dp"
+                    android:background="@drawable/border_white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_account" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_account"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_card" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_card"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_fund" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_fund"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_insure" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:fontFamily="@font/noto_sans_kr"
+                                android:letterSpacing="-0.02"
+                                android:lineSpacingExtra="21dp"
+                                android:text="@string/asset_go_insurance"
+                                android:textColor="@color/black"
+                                android:textFontWeight="400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_loans" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_loan"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_point" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_point"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_annuity" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_annuity"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_comm" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_community"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_car" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_car"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_reales" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="9dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:text="@string/asset_go_realestate"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/ic_go_to_other" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="6dp"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Android.Body2Regular"
+                                android:fontFamily="@font/noto_sans_kr"
+                                android:letterSpacing="-0.02"
+                                android:lineSpacingExtra="21dp"
+                                android:text="@string/asset_go_except"
+                                android:textColor="@color/black"
+                                android:textFontWeight="400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="4dp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                android:src="@drawable/ic_right_chevron_gray" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal"></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="6dp"
+                    android:textAppearance="@style/TextAppearance.Android.Body1Bold"
+                    android:text="@string/asset_miss"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="6dp"
+                    android:textAppearance="@style/TextAppearance.Android.Body3Regular"
+                    android:text="@string/asset_find_miss" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/border_white_grey">
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_search"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                        android:text="@string/asset_find_asset"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="46dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="67dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                            android:text="@string/asset_hide_asset"
+                            android:textColor="@color/grey600" />
+                        <View
+                            android:layout_width="65dp"
+                            android:layout_height="1dp"
+                            android:background="@color/blue_grey500" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="51dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.Android.Body2Bold"
+                            android:text="@string/asset_setting"
+                            android:textColor="@color/grey600" />
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="1dp"
+                            android:background="@color/blue_grey500" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

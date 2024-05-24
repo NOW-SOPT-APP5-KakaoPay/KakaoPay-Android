@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--바텀 네비바 스타일-->
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/nav_icon_tint</item>
+        <item name="itemTextColor">@drawable/nav_text_tint</item>
+        <item name="itemTextAppearance">@style/TextAppearance.Android.Detail1Regular</item>
+    </style>
+</resources>

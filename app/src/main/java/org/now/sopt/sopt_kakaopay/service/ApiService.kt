@@ -1,5 +1,6 @@
 package org.now.sopt.sopt_kakaopay.service
 
+import org.now.sopt.sopt_kakaopay.model.BalanceResponseDto
 import org.now.sopt.sopt_kakaopay.model.BookMarkRequestDto
 import org.now.sopt.sopt_kakaopay.model.BookMarkResponseDto
 import org.now.sopt.sopt_kakaopay.model.TransactionHistoryResponseDto
@@ -13,6 +14,9 @@ interface ApiService {
     @GET("api/v1/history")
     suspend fun fetchTransactionHistory(): Response<TransactionHistoryResponseDto>
 
+    @GET("api/v1/member/balance")
+    suspend fun fetchBalance(): Response<BalanceResponseDto>
+  
     @POST("api/v1/bookmark")
     suspend fun addBookmark(
         @Body bookmarkRequest: BookMarkRequestDto

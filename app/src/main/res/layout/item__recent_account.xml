@@ -45,14 +45,12 @@
         app:layout_constraintStart_toEndOf="@id/tv_recent_account_user_bank"
         app:layout_constraintTop_toBottomOf="@id/tv_recent_account_user_name" />
 
-    <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/btn_recent_user_favorite"
+    <ImageView
+        android:id="@+id/iv_recent_user_favorite"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginEnd="24dp"
-        android:button="@null"
-        android:background="@drawable/selector_star"
-        android:contentDescription="@null"
+        android:src="@drawable/ic_star_empty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

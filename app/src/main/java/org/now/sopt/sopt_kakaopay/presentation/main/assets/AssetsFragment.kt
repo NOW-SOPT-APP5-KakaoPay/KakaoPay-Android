@@ -57,7 +57,7 @@ class AssetsFragment : Fragment() {
 
                     is UiState.Success -> {
                         binding.tvAssetSaved.visibility = View.VISIBLE
-                        binding.tvAssetSaved.text = uiState.data.payMoney // 데이터를 설정
+                        binding.tvAssetSaved.text = uiState.data.balance // 데이터를 설정
                     }
 
                     is UiState.Error -> {

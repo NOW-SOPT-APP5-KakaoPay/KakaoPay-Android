@@ -6,8 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import org.now.sopt.sopt_kakaopay.R
+import org.now.sopt.sopt_kakaopay.ServicePool
 import org.now.sopt.sopt_kakaopay.databinding.FragmentPaymentBinding
+import org.now.sopt.sopt_kakaopay.presentation.main.assets.AssetsViewModel
+import org.now.sopt.sopt_kakaopay.presentation.main.assets.AssetsViewModelFactory
 
 class PaymentFragment : Fragment() {
 
@@ -15,6 +20,12 @@ class PaymentFragment : Fragment() {
     private val binding: FragmentPaymentBinding
         get() = requireNotNull(_binding) { "바인딩 객체 좀 생성해주세요 제발!!" }
 
+    private val viewModel: AssetsViewModel by viewModels {
+        AssetsViewModelFactory(ServicePool.authService)
+    }
+
+    private var payMoney: String = ""
+    private var payPoint: String = ""
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,6 +40,18 @@ class PaymentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupCustomSwitch()
         setupOptions()
+        viewModel.payMoneyData.observe(viewLifecycleOwner, Observer { payMoney ->
+            this.payMoney = payMoney
+            binding.tvPaymentPayMoneyAmount.text = payMoney
+        })
+
+        viewModel.payPointData.observe(viewLifecycleOwner, Observer { payPoint ->
+            this.payPoint = payPoint
+            binding.tvPaymentPayPointAmount.text = payPoint
+        })
+
+        viewModel.fetchPayPoint()
+        viewModel.fetchPayMoney()
     }
 
     private fun setupCustomSwitch() {

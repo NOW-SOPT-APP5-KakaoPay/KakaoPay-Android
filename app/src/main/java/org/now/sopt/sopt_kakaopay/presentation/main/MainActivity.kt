@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import org.now.sopt.sopt_kakaopay.R
 import org.now.sopt.sopt_kakaopay.databinding.ActivityMainBinding
+import org.now.sopt.sopt_kakaopay.presentation.PaymentFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.all.AllFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.assets.AssetsFragment
 import org.now.sopt.sopt_kakaopay.presentation.main.benefits.BenefitsFragment
